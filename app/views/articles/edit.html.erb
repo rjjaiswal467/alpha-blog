@@ -1,10 +1,8 @@
-<h1>Create an articles</h1>
-
-
+<h1>edit existing article</h1>
 
 <% if @article.errors.any? %>
 <ul>
-    <h2> errors </h2>
+    <h2> errors while updating </h2>
     <% @article.errors.full_messages.each do |msg| %>
     
     <li><%= msg %></li>
@@ -26,7 +24,7 @@
     <p>
         <%= f.submit %>
     </p>
-    
-    <%= link_to "Back to article page", articles_path %>
 
 <% end %>
+
+<%= link_to "Back to article page", articles_path %>
